@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>komisi tugas</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="manifest" href="manifest.json" />
+<link rel="icon" href="ccc.png" type="image/png" />
+<meta name="theme-color" content="#d4af37" />
+</head>
+<body>
+  <div class="app-wrap">
+    <div class="gold-bar top"></div>
+
+    <!-- PROFIL -->
+    <section class="profile-area">
+      <div class="profile-row">
+        <img class="avatar" src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" alt="avatar">
+        <div class="profile-texts">
+          <div class="username" id="username">Loading...</div>
+          <div class="userid" id="userid">ID: ...</div>
+        </div>
+      </div>
+
+      <!-- SALDO -->
+      <div class="saldo-card">
+        <div class="saldo-left">
+          <div class="label">Saldo Rekening</div>
+          <div class="amount" id="saldoValue">Rp 0</div>
+          <button class="link-btn" id="btn-topup">Isi Ulang ›</button>
+        </div>
+        <div class="saldo-right">
+          <div class="label">Kuantitas Beku</div>
+          <div class="amount" id="bekuValue">Rp 0</div>
+          <button class="link-btn" id="btn-withdraw">Penarikan ›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUSAT LAYANAN -->
+    <section class="services">
+      <h2 class="section-title">Pusat Layanan</h2>
+      <div class="service-grid">
+        <div class="service-item" id="svc-history"><i class="bx bx-history"></i><p>Sejarah</p></div>
+        <div class="service-item" id="svc-withdraws"><i class="bx bx-notepad"></i><p>Catatan Penarikan</p></div>
+        <div class="service-item" id="svc-guide"><i class="bx bx-book-open"></i><p>Memandu</p></div>
+        <div class="service-item" id="svc-invest"><i class="bx bx-briefcase"></i><p>Investasi</p></div>
+        <div class="service-item" id="svc-logout"><i class="bx bx-log-out"></i><p>Logout</p></div>
+      </div>
+    </section>
+
+    <!-- RIWAYAT -->
+    <section class="tx-section">
+      <h3 class="tx-title">Riwayat Transaksi</h3>
+      <div id="txList" class="tx-list">Memuat...</div>
+    </section>
+
+    <div class="gold-bar bottom"></div>
+  </div>
+
+  <div id="modalRoot"></div>
+  <script src="dashboard.js"></script>
+</body>
+</html>

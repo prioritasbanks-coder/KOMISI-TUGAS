@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Masuk | Komisi Tugas</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+<link rel="icon" href="ccc.png" type="image/png" />
+<meta name="theme-color" content="#d4af37" />
+</head>
+<body class="auth-body">
+
+  <div class="auth-container">
+    <div class="auth-card">
+      <h1 class="app-title">💰 Komisi<span>Tugas</span></h1>
+      <p class="subtitle">Masuk untuk mulai mendapatkan komisi</p>
+
+      <!-- LOGIN FORM -->
+      <form id="loginForm" class="form active" autocomplete="on">
+        <div class="input-group">
+          <label>Username / Email / Nomor HP</label>
+          <input type="text" id="loginUser" name="loginUser" placeholder="Contoh: username, email@contoh.com atau 0812xxxx" required />
+        </div>
+        <div class="input-group">
+          <label>Kata Sandi</label>
+          <input type="password" id="loginPass" name="loginPass" placeholder="••••••••" required />
+        </div>
+        <button type="submit" class="btn-primary">Masuk</button>
+
+        <p class="switch-text">
+          Belum punya akun? <a href="#" id="toRegister">Daftar Sekarang</a>
+        </p>
+      </form>
+
+      <!-- REGISTER FORM -->
+      <form id="registerForm" class="form hidden" autocomplete="on">
+        <div class="input-group">
+          <label>Username</label>
+          <input type="text" id="regUsername" name="regUsername" placeholder="username unik (tanpa spasi)" required />
+        </div>
+
+        <div class="input-group">
+          <label>Nama Lengkap</label>
+          <input type="text" id="regNama" name="regNama" placeholder="Nama lengkap sesuai KTP" required />
+        </div>
+
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" id="regEmail" name="regEmail" placeholder="email@contoh.com" />
+        </div>
+
+        <div class="input-group">
+          <label>WhatsApp</label>
+          <input type="tel" id="regWhatsapp" name="regWhatsapp" placeholder="0812xxxx (WA aktif)" />
+        </div>
+
+        <div class="input-group">
+          <label>Jenis Bank / E-Wallet</label>
+          <select id="regBank" name="regBank" required>
+            <option value="">Pilih Bank atau E-Wallet</option>
+
+            <!-- BANK NASIONAL -->
+            <optgroup label="Bank Nasional">
+              <option value="BCA">BCA (Bank Central Asia)</option>
+              <option value="Mandiri">Mandiri</option>
+              <option value="BRI">BRI (Bank Rakyat Indonesia)</option>
+              <option value="BNI">BNI (Bank Negara Indonesia)</option>
+              <option value="BTN">BTN (Bank Tabungan Negara)</option>
+            </optgroup>
+
+            <!-- BANK SWASTA & DIGITAL -->
+            <optgroup label="Bank Swasta & Digital">
+              <option value="CIMB Niaga">CIMB Niaga</option>
+              <option value="Danamon">Danamon</option>
+              <option value="Permata">Permata</option>
+              <option value="OCBC NISP">OCBC NISP</option>
+              <option value="Panin Bank">Panin Bank</option>
+              <option value="Mega">Bank Mega</option>
+              <option value="Sinarmas">Bank Sinarmas</option>
+              <option value="Maybank">Maybank</option>
+              <option value="BTPN">BTPN</option>
+              <option value="Jenius">Jenius (BTPN Digital)</option>
+              <option value="Seabank">SeaBank</option>
+              <option value="Bank Jago">Bank Jago</option>
+              <option value="Neo Commerce">Bank Neo Commerce</option>
+              <option value="Allo Bank">Allo Bank</option>
+              <option value="Blu BCA Digital">Blu (BCA Digital)</option>
+            </optgroup>
+
+            <!-- BANK SYARIAH -->
+            <optgroup label="Bank Syariah">
+              <option value="BSI">BSI (Bank Syariah Indonesia)</option>
+              <option value="Muamalat">Bank Muamalat</option>
+              <option value="Mega Syariah">Bank Mega Syariah</option>
+            </optgroup>
+
+            <!-- BANK DAERAH -->
+            <optgroup label="Bank Pembangunan Daerah (BPD)">
+              <option value="Bank DKI">Bank DKI</option>
+              <option value="Bank BJB">Bank BJB</option>
+              <option value="Bank Jatim">Bank Jatim</option>
+              <option value="Bank Jateng">Bank Jateng</option>
+              <option value="Bank Sumut">Bank Sumut</option>
+              <option value="Bank Nagari">Bank Nagari (Sumbar)</option>
+              <option value="Bank Riau Kepri">Bank Riau Kepri</option>
+              <option value="Bank Sumsel Babel">Bank Sumsel Babel</option>
+              <option value="Bank Kalbar">Bank Kalbar</option>
+              <option value="Bank Kaltimtara">Bank Kaltimtara</option>
+              <option value="Bank Kalteng">Bank Kalteng</option>
+              <option value="Bank Sulselbar">Bank Sulselbar</option>
+              <option value="Bank Sulutgo">Bank SulutGo</option>
+              <option value="Bank Papua">Bank Papua</option>
+              <option value="Bank NTT">Bank NTT</option>
+              <option value="Bank NTB Syariah">Bank NTB Syariah</option>
+            </optgroup>
+
+            <!-- E-WALLET & FINTECH -->
+            <optgroup label="E-Wallet & Fintech">
+              <option value="DANA">DANA</option>
+              <option value="OVO">OVO</option>
+              <option value="GoPay">GoPay</option>
+              <option value="ShopeePay">ShopeePay</option>
+              <option value="LinkAja">LinkAja</option>
+              <option value="Kredivo">Kredivo</option>
+              <option value="Akulaku">Akulaku</option>
+              <option value="Flip">Flip</option>
+            </optgroup>
+
+            <option value="Other">Bank / Dompet Lainnya</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label>No. Rekening / No. Akun</label>
+          <input type="text" id="regRek" name="regRek" placeholder="Nomor rekening atau ID e-wallet" />
+        </div>
+
+        <div class="input-group">
+          <label>Kata Sandi</label>
+          <input type="password" id="regPass" name="regPass" placeholder="Minimal 6 karakter" required />
+        </div>
+
+        <div class="input-group">
+          <label>Konfirmasi Kata Sandi</label>
+          <input type="password" id="regConfirm" name="regConfirm" placeholder="Ulangi kata sandi" required />
+        </div>
+
+        <button type="submit" class="btn-primary">Buat Akun</button>
+
+        <p class="switch-text">
+          Sudah punya akun? <a href="#" id="toLogin">Masuk</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const toRegister = document.getElementById('toRegister');
+      const toLogin = document.getElementById('toLogin');
+      const loginForm = document.getElementById('loginForm');
+      const registerForm = document.getElementById('registerForm');
+
+      if (toRegister) toRegister.addEventListener('click', (e) => {
+        e.preventDefault();
+        loginForm.classList.remove('active'); loginForm.classList.add('hidden');
+        registerForm.classList.remove('hidden'); registerForm.classList.add('active');
+        window.scrollTo({top:0, behavior:'smooth'});
+      });
+
+      if (toLogin) toLogin.addEventListener('click', (e) => {
+        e.preventDefault();
+        registerForm.classList.remove('active'); registerForm.classList.add('hidden');
+        loginForm.classList.remove('hidden'); loginForm.classList.add('active');
+        window.scrollTo({top:0, behavior:'smooth'});
+      });
+
+      registerForm.addEventListener('submit', (ev) => {
+        const p = document.getElementById('regPass').value;
+        const c = document.getElementById('regConfirm').value;
+        if (p !== c) {
+          ev.preventDefault();
+          alert('Password dan konfirmasi tidak cocok.');
+        }
+        if (p.length > 0 && p.length < 6) {
+          ev.preventDefault();
+          alert('Password minimal 6 karakter.');
+        }
+      });
+    })();
+
+
+    if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js")
+    .then(() => console.log("✅ Service Worker aktif"))
+    .catch(err => console.error("❌ Gagal daftar SW:", err));
+}
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "Komisi Tugas",
+  "short_name": "KomisiTugas",
+  "description": "Aplikasi Komisi Tugas – Dapatkan komisi dari setiap tugas yang kamu selesaikan.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#d4af37",
+  "icons": [
+    {
+      "src": "ccc.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "ccc512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
